@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Fun Friday Group</title>
+  <link rel="stylesheet" href="/styles.css"/>
+</head>
+<body>
+  <div class="phone">
+    <!-- Top bar -->
+    <header class="topbar">
+      <button class="icon-btn back" aria-label="Back">←</button>
+      <img class="group-avatar" src="/image.png" alt="group"/>
+
+      <div class="room">
+        <div class="room-title brand">Fun Friday Group</div>
+      </div>
+      <button class="mask-btn" title="Anonymous mode">🕶️</button>
+    </header>
+
+    <!-- Messages -->
+    <main id="messages" class="messages"></main>
+
+    <!-- Anonymous banner line -->
+    <div class="anon-banner">
+      <span class="mask">🕶️</span>
+      <span id="anonBanner">Now you’re appearing as <strong>Anonymous</strong>!</span>
+      <span class="mask">🕶️</span>
+    </div>
+
+    <!-- Composer -->
+    <footer class="composer">
+      <div class="input-shell">
+        <button class="icon-btn" title="Camera">📷</button>
+        <input id="messageInput" placeholder="Type a message …" autocomplete="off"/>
+        <button class="icon-btn" title="Attach">📎</button>
+      </div>
+      <button id="sendBtn" class="send-btn" aria-label="Send">➤</button>
+    </footer>
+  </div>
+
+  <script src="https://cdn.socket.io/4.7.5/socket.io.min.js" crossorigin="anonymous" defer></script>
+  <script src="/client.js" defer></script>
+</body>
+</html>
